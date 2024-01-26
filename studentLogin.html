@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Student Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .registration-form {
+      max-width: 400px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+    #dp{
+      height: 100px;
+      width: 100px;
+      /* border-radius: 50px; */
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="registration-form">
+  <h2 style="text-align: center;">Student Registration</h2>
+  <form id="adminRegistrationForm">
+
+    <div onchange="dpf()" style="display: flex; justify-content: center; "> 
+      <div style="height: 110px; width: 100px; border: 1px solid black;">
+        <img src="" alt=" upload profile" id="dp">
+        <input style="opacity: 0; height: 100%;" id="dpinput" type="file" accept="image/*" >
+      </div>
+
+    </div>
+
+    <label for="Name">Full Name:</label>
+    <input id="Name" name="Name" required>
+
+    
+    <div class="d-flex">
+      
+      <div>
+          <label for="gender">Gender:</label>
+          <input id="gender" name="gender" required>
+      </div>
+      &nbsp;
+       <div>
+         <label for="age">Age:</label>
+         <input id="age" name="age" required>
+       </div>
+      
+    </div>
+
+    <label for="class">Class</label>
+    <input type="text" name="class" id="calss" required>
+
+    <label for="parent">Parent Name</label>
+    <input type="text" name="parent" id="parent" required>
+
+    <label for="Mobile">Parent Number:</label>
+    <input id="Mobile" name="Mobile" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="username">Username (Roll Number):</label>
+    <input id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <div class="text-right">
+      <button class="btn btn-success" type="submit" onclick="register()">Register</button>
+    </div>  </form>
+</div>
+
+
+<script>
+  document.getElementById('adminRegistrationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+  });
+
+  function dpf(){
+    var input = document.getElementById('dpinput');
+            var image = document.getElementById('dp');
+
+            var file = input.files[0];
+            console.log(file)
+
+            if (file) {
+                image.src = URL.createObjectURL(file);
+            }
+  }
+
+  function sendFormDataToServer(form) {
+    
+  }
+</script>
+
+</body>
+</html>
