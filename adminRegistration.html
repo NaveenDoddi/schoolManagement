@@ -60,7 +60,7 @@
               </div>
             
               <label for="Name">Full Name:</label>
-              <input id="Name" name="Name" required>
+              <input id="name" name="Name" required>
             
               <label for="submit">Subject:</label>
               <input id="subject" name="subject" required>
@@ -79,7 +79,7 @@
               </div>
 
               <label for="Mobile">Mobile Number:</label>
-              <input id="Mobile" name="Mobile" required>
+              <input id="mobile" name="Mobile" required>
             
               <label for="email">Email:</label>
               <input type="email" id="email" name="email" required>
@@ -91,40 +91,60 @@
               <input type="password" id="password" name="password" required>
             
               <div class="text-right">
-                <button class="btn btn-success" type="submit" onclick="register()">Register</button>
+                <button class="btn btn-success" type="submi" onclick="register()">Register</button>
               </div>
           </form>
       </div>
 
-
     <script>
     
         function dpf(){
-          var input = document.getElementById('dpinput');
-              var image = document.getElementById('dp');
-        
-              var file = input.files[0];
-        
-              if (file) {
-                  image.src = URL.createObjectURL(file);
-              }
-          }
+            var input = document.getElementById('dpinput');
+                var image = document.getElementById('dp');
+            
+                var file = input.files[0];
+            
+                if (file) {
+                    image.src = URL.createObjectURL(file);
+                }
+            }
         
         function register(){
-            var inputs = document.getElementById("registerBlock").getElementsByTagName("input")
-        
+
+            // document.getElementById('adminRegistrationForm').addEventListener('submit', function(event) {
+            //     event.preventDefault();
+
+            // });
+
+            // function sendFormDataToServer(form) {
+    
+            // }
+
             var person = {
-                  img : inputs[0].value,
-                  name :inputs[1].value,
-                  subject:inputs[2].value,
-                  Mobile : inputs[3].value,
-                  email :inputs[4].value,
-                  username :inputs[5].value,
-                  password : inputs[6].value,
+                img : document.getElementById("dpinput").value,
+                name : document.getElementById("name").value,
+                subject : document.getElementById("subject").value,
+                gender :  document.getElementById("gender").value,
+                age :  document.getElementById("age").value,
+                mobile : document.getElementById("mobile").value,
+                email : document.getElementById("email").value,
+                username : document.getElementById("username").value,
+                password : document.getElementById("password").value,
             }
-            window.location.pathname = "studentLogin.html"
-          
-            
+            // window.location.pathname = "studentLogin.html"
+
+            // var formData = new FormData();
+            // formData.append('image', inputs[0].value);
+
+            fetch("http://localhost:3000/Admins", {
+                method: "POST",
+                body: JSON.stringify(person),
+                headers: {
+                    "Content-type": "application/json"
+                }
+            });
+
+
             console.log(person)  
           
     }

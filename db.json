@@ -1,31 +1,63 @@
+
 {
-    "empData": [
-      {
-        "first_name": "na",
-        "last_name": "Plevey",
-        "email": "jpleveyl@devhub.com",
-        "gender": "Female",
-        "salary": "$48530.92",
-        "phone": "250 389 3796",
-        "id": 1
-      },
-      {
-        "first_name": "naveen",
-        "last_name": "Plevey",
-        "email": "jpleveyl@devhub.com",
-        "gender": "Female",
-        "salary": "$48530.92",
-        "phone": "250 389 3796",
-        "id": 2
-      },
-      {
-        "first_name": "naveen",
-        "last_name": "Plevey",
-        "email": "jpleveyl@devhub.com",
-        "gender": "Female",
-        "salary": "$48530.92",
-        "phone": "250 389 3796",
-        "id": 3
-      }
-    ]
-  }
+  "Admins": [
+    {
+      "img": "",
+      "name": "",
+      "subject": "",
+      "Mobile": "",
+      "email": "",
+      "username": "",
+      "password": "",
+      "id": 1
+    },
+    {
+      "img": "",
+      "name": "navven",
+      "subject": "maths",
+      "gender": "male",
+      "age": "99",
+      "mobile": "ssssssss",
+      "email": "ssssssss",
+      "username": "naveen123",
+      "password": "123",
+      "id": 8
+    },
+    {
+      "img": "",
+      "name": "",
+      "subject": "",
+      "gender": "",
+      "age": "",
+      "mobile": "",
+      "email": "",
+      "username": "",
+      "password": "",
+      "id": 9
+    },
+    {
+      "img": "",
+      "name": "",
+      "subject": "",
+      "gender": "",
+      "age": "",
+      "mobile": "",
+      "email": "",
+      "username": "",
+      "password": "",
+      "id": 10
+    },
+    {
+      "img": "",
+      "name": "",
+      "subject": "",
+      "gender": "",
+      "age": "",
+      "mobile": "",
+      "email": "",
+      "username": "",
+      "password": "",
+      "id": 11
+    }
+  ]
+}
