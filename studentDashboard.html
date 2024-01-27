@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <title>studentDashboard</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        img{
+            height: 150px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+        }
+      
+        .mainDiv{
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="mainDiv" >
+        <div id="imageDiv" class=" text-center">
+            <img id="dp" src="" alt="">
+        </div>
+        <div id="details" class="mt-3">
+            <table class="table ">
+                <tr>
+                    <td class="text-center">Full Name</td>
+                    <td id="name" class="text-left" id="naveen">naveen</td>
+                </tr>
+                <tr>
+                    <td class="text-center">Roll Number</td>
+                    <td id="username">naveen</td>
+                </tr>
+                <tr>
+                    <td class="text-center">Class</td>
+                    <td id="class">naveen</td>
+                </tr>
+                <tr>
+                    <td class="text-center">Age</td>
+                    <td id="age">naveen</td>
+                </tr>
+                <tr>
+                    <td class="text-center">Gender</td>
+                    <td id="gender">naveen</td>
+                </tr>
+                <tr>
+                    <td class="text-center">Parent Name</td>
+                    <td id="parent">naveen</td>
+                </tr>
+                <tr>
+                    <td class="text-center">Parent Mobile</td>
+                    <td id="mobile">naveen</td>
+                </tr>
+                <tr>
+                    <td class="text-center">Adress</td>
+                    <td id="adress">naveen</td>
+                </tr>
+                <tr>
+                    <td class="text-center">Gmail</td>
+                    <td id="email">naveen</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <script>
+        var username = localStorage.getItem("username")
+        console.log(username)
+
+        fetch(" http://localhost:3000/Students?username=ff")
+        .then(response => response.json())
+        .then((data) => {
+
+            document.getElementById("dp").src = data[0].img
+
+            document.getElementById("name").innerText = data[0].name
+            document.getElementById("gender").innerText = data[0].gender
+            document.getElementById("age").innerText = data[0].age
+            document.getElementById("class").innerText = data[0].class
+            document.getElementById("parent").innerText = data[0].parent
+
+            document.getElementById("mobile").innerText = data[0].mobile
+            document.getElementById("email").innerText = data[0].email
+            document.getElementById("adress").innerText = data[0].adress
+            document.getElementById("username").innerText = data[0].username
+        })
+
+    </script>
+</body>
+</html>

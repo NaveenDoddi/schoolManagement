@@ -1,16 +1,19 @@
-
 {
   "Admins": [
     {
       "img": "",
-      "name": "",
-      "subject": "",
-      "Mobile": "",
-      "email": "",
-      "username": "",
-      "password": "",
-      "id": 1
-    },
+      "name": "navven",
+      "subject": "maths",
+      "gender": "male",
+      "age": "99",
+      "mobile": "ssssssss",
+      "email": "ssssssss",
+      "username": "naveen123",
+      "password": "123",
+      "id": 8
+    }
+  ],
+  "Students": [
     {
       "img": "",
       "name": "navven",
@@ -24,40 +27,59 @@
       "id": 8
     },
     {
-      "img": "",
+      "img": "C:\\fakepath\\himalayas1.webp",
       "name": "",
-      "subject": "",
       "gender": "",
       "age": "",
+      "class": "",
+      "parent": "",
+      "adress": "",
       "mobile": "",
       "email": "",
-      "username": "",
-      "password": "",
+      "username": ".",
+      "password": "1",
       "id": 9
     },
     {
-      "img": "",
       "name": "",
-      "subject": "",
       "gender": "",
       "age": "",
+      "class": "",
+      "parent": "",
+      "adress": "",
       "mobile": "",
       "email": "",
-      "username": "",
-      "password": "",
+      "username": "dd",
+      "password": "dd",
       "id": 10
     },
     {
-      "img": "",
+      "img": "blob:http://127.0.0.1:5500/5b9827b1-a619-47b4-881a-8744e60eae4b",
       "name": "",
-      "subject": "",
       "gender": "",
       "age": "",
+      "class": "",
+      "parent": "",
+      "adress": "",
+      "mobile": "",
+      "email": "",
+      "username": "ff",
+      "password": "ff",
+      "id": 11
+    },
+    {
+      "img": "blob:http://127.0.0.1:5500/fbdf15d7-0d0a-4ba9-ae01-48887eae84d0",
+      "name": "",
+      "gender": "",
+      "age": "",
+      "class": "",
+      "parent": "",
+      "adress": "",
       "mobile": "",
       "email": "",
       "username": "",
       "password": "",
-      "id": 11
+      "id": 12
     }
   ]
 }
