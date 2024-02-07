@@ -79,10 +79,10 @@
 
 
     <script>
-        var username = localStorage.getItem("username")
+        var username = localStorage.getItem("usernameStudent")
         console.log(username)
 
-        fetch(" http://localhost:3000/Students?username=ff")
+        fetch(" http://localhost:3000/Students?username="+username)
         .then(response => response.json())
         .then((data) => {
 

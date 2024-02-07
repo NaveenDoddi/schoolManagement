@@ -91,7 +91,6 @@
     
         </div>
 
-        
         <div>
             <div id="imageDiv" class=" text-center">
                 <img id="dp" src="dp2.jpg" alt="">
@@ -139,10 +138,10 @@
 
 
     <script>
-        var username = localStorage.getItem("username")
+        var username = localStorage.getItem("usernameAdmin")
         console.log(username)
 
-        fetch(" http://localhost:3000/Admins?username=ff")
+        fetch(" http://localhost:3000/Admins?username="+username)
         .then(response => response.json())
         .then((data) => {
 
