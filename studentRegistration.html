@@ -38,11 +38,23 @@
     button:hover {
       background-color: #45a049;
     }
+
     #dp{
       height: 100px;
-      width: 100px;
-      /* border-radius: 50px; */
+      width: 115px;
+      border-radius: 50%;
     }
+    #imagelabel{
+      display: block;
+      width: auto;
+      background-color: rgb(235, 208, 5);
+      color: #fff;
+      padding: 5px;
+      margin: 10px auto;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
 
   </style>
 </head>
@@ -50,19 +62,26 @@
 
 <div class="registration-form">
   <h2 style="text-align: center;" class="h2 text-danger mb-3">Student Registration</h2>
-  <!-- <form id="adminRegistrationForm"> -->
+  <form id="adminRegistrationForm">
 
-    <div onchange="dpf()" style="display: flex; justify-content: center; "> 
-      <div style="height: 110px; width: 100px; border: 1px solid black;">
-        <img src="" alt=" upload profile" id="dp">
-        <input style="opacity: 0; height: 100%;" id="dpinput" type="file" accept="image/*" >
+    <div onchange="uploaddp()"  class="d-flex justify-content-center"> 
+      <div>
+          <img src="default_profile.jpg" alt="" id="dp">
+
+          <label id="imagelabel" for="dpinput">Upload Image</label>
+          <input style="display: none;" id="dpinput" type="file" accept="image/*" >
+
       </div>
-
     </div>
 
     <label for="Name">Full Name:</label>
     <input id="name" name="Name" required>
+    
+    <label for="class">Class</label>
+    <input type="text" name="class" id="class" required>
 
+    <label for="rollnumber">Roll Number</label>
+    <input type="text" name="rollnumber" id="rollnumber" required>
     
     <div class="d-flex">
       
@@ -77,9 +96,6 @@
        </div>
       
     </div>
-
-    <label for="class">Class</label>
-    <input type="text" name="class" id="class" required>
 
     <label for="parent">Parent Name</label>
     <input type="text" name="parent" id="parent" required>
@@ -98,18 +114,17 @@
 
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required>
-
-    <div class="text-right">
-      <button class="btn btn-success" type="submit" onclick="register()">Register</button>
-    </div>  
-  <!-- </form> -->
+ 
+  </form>
+  <div class="d-flex justify-content-end">
+    <button class="btn btn-success" type="submit" onclick="register()">Register</button>
+  </div> 
 </div>
-
 
 <script>
 
 
-  function dpf(){
+  function uploaddp(){
     var input = document.getElementById('dpinput');
     var image = document.getElementById('dp');
     var file = input.files[0];
@@ -126,12 +141,13 @@
 
     var person = {
         name : document.getElementById("name").value,
+        class : document.getElementById("class").value,
+        rollnumber:document.getElementById("rollnumber").value,
         gender :  document.getElementById("gender").value,
         age :  document.getElementById("age").value,
-        class : document.getElementById("class").value,
-        parent :  document.getElementById("parent").value,
-        adress : document.getElementById("adress").value,
+        parentname :  document.getElementById("parent").value,
         mobile : document.getElementById("mobile").value,
+        address : document.getElementById("adress").value,
         email : document.getElementById("email").value,
         username : document.getElementById("username").value,
         password : document.getElementById("password").value,

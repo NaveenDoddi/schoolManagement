@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/accd26a21f.js" crossorigin="anonymous"></script><!-- icons -->
 
     <title>Admin Registration</title>
     <style>
@@ -24,11 +23,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
       
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
-      
         input {
             width: 100%;
             padding: 8px;
@@ -38,8 +32,19 @@
       
         #dp{
           height: 100px;
-          width: 100px;
-          /* border-radius: 50px; */
+          width: 115px;
+          border-radius: 50%;
+        }
+
+        #imagelabel{
+            display: block;
+            width: auto;
+            background-color: rgb(235, 208, 5);
+            color: #fff;
+            padding: 5px;
+            margin: 10px auto;
+            border-radius: 5px;
+            cursor: pointer;
         }
       
     </style>
@@ -53,13 +58,15 @@
           <!-- <form id="adminRegistrationForm"> -->
           
               <div onchange="uploaddp()"  class="d-flex justify-content-center"> 
-                  <div style="height: 110px; width: 100px; border: 1px solid black;">
-                      <img class="fa-solid fa-user" alt=" upload profile" id="dp">
-                      <input style="opacity: 0; height: 100%;" id="dpinput" type="file" accept="image/*" >
+                  <div>
+                      <img src="default_profile.jpg" alt="" id="dp">
+
+                      <label id="imagelabel" for="dpinput">Upload Image</label>
+                      <input style="display: none;" id="dpinput" type="file" accept="image/*" >
+
                   </div>
-                
               </div>
-            
+              
               <label for="Name">Full Name:</label>
               <input id="name" name="Name" required>
             
@@ -91,7 +98,7 @@
               <label for="password">Password:</label>
               <input type="password" id="password" name="password" required>
             
-              <div class="text-right">
+              <div class="d-flex justify-content-end">
                 <button class="btn btn-success" type="submi" onclick="register()">Register</button>
               </div>
           <!-- </form> -->
@@ -101,16 +108,19 @@
     
         function uploaddp(){
             var input = document.getElementById('dpinput');
-                var image = document.getElementById('dp');
-            
-                var file = input.files[0];
-            
-                if (file) {
-                    image.src = URL.createObjectURL(file);
-                }
+            var image = document.getElementById('dp');
+        
+            var file = input.files[0];
+        
+            if (file) {
+                image.src = URL.createObjectURL(file);
             }
+            console.log(image.src)
+        }
         
         function register(){
+
+
 
             var person = {
                 img : document.getElementById("dpinput").value,

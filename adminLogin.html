@@ -41,8 +41,6 @@
           /* border-radius: 50px; */
         }
 
-        
-      
     </style>
 </head>
 <body>
@@ -54,7 +52,7 @@
           <!-- <form> -->
           
               <label for="username">Username:</label>
-              <input type="text" id="username" name="username" value="naveen123" required>
+              <input type="text" id="username" name="username" value="Dhana123" required>
 
               <label for="password">Password:</label>
               <input type="password" id="password" name="password" value="123" required>
@@ -80,25 +78,21 @@
             fetch(" http://localhost:3000/Admins?username="+username)
             .then(response => response.json())
             .then((data)=> {
+                try {
+                    if(username == data[0].username){
+                        if(password == data[0].password){
+                            console.log(data, username)
+                            localStorage.setItem("usernameAdmin", username)
+                            window.location.href = "adminDashboard.html"
+                            
+                        }else{
+                            window.alert("incorect password")
 
-                
-                    try {
-                        if(username == data[0].username){
-                            if(password == data[0].password){
-                                console.log(data, username)
-                                localStorage.setItem("usernameAdmin", username)
-                                window.location.href = "adminDashboard.html"
-                                
-                            }else{
-                                window.alert("incorect password")
- 
-                            }
                         }
-                    } catch (error) {
-                        window.location.href = "adminDashboard.html"
-                    } finally {
-                        
                     }
+                } catch (error) {
+                    window.location.href = "adminDashboard.html"
+                }
 
                 
             

@@ -2,97 +2,32 @@
   "Admins": [
     {
       "img": "",
-      "name": "navven",
+      "name": "Dhana Shekar",
       "subject": "maths",
       "gender": "male",
-      "age": "99",
-      "mobile": "ssssssss",
-      "email": "ssssssss",
-      "username": "naveen123",
+      "age": "40",
+      "mobile": "9844934573",
+      "email": "dhanashekar123@gmail.com",
+      "username": "Dhana123",
       "password": "123",
-      "id": 8
+      "id": 1
     }
   ],
   "Students": [
     {
       "img": "",
-      "name": "navven",
-      "subject": "maths",
+      "name": "Doddi Navven",
+      "class": "8",
+      "rollnumber": "20BF1A1215",
       "gender": "male",
-      "age": "99",
-      "mobile": "ssssssss",
-      "email": "ssssssss",
+      "age": "15",
+      "parentname": "Prasad",
+      "mobile": "8555913494",
+      "address": "kadiripalli,guntakal",
+      "email": "naveen123@gamil.com",
       "username": "naveen123",
       "password": "123",
-      "id": 8
-    },
-    {
-      "img": "C:\\fakepath\\himalayas1.webp",
-      "name": "",
-      "gender": "",
-      "age": "",
-      "class": "",
-      "parent": "",
-      "adress": "",
-      "mobile": "",
-      "email": "",
-      "username": ".",
-      "password": "1",
-      "id": 9
-    },
-    {
-      "name": "",
-      "gender": "",
-      "age": "",
-      "class": "",
-      "parent": "",
-      "adress": "",
-      "mobile": "",
-      "email": "",
-      "username": "dd",
-      "password": "dd",
-      "id": 10
-    },
-    {
-      "img": "blob:http://127.0.0.1:5500/5b9827b1-a619-47b4-881a-8744e60eae4b",
-      "name": "",
-      "gender": "",
-      "age": "",
-      "class": "",
-      "parent": "",
-      "adress": "",
-      "mobile": "",
-      "email": "",
-      "username": "ff",
-      "password": "ff",
-      "id": 11
-    },
-    {
-      "img": "blob:http://127.0.0.1:5500/fbdf15d7-0d0a-4ba9-ae01-48887eae84d0",
-      "name": "",
-      "gender": "",
-      "age": "",
-      "class": "",
-      "parent": "",
-      "adress": "",
-      "mobile": "",
-      "email": "",
-      "username": "",
-      "password": "",
-      "id": 12
-    },
-    {
-      "name": "",
-      "gender": "",
-      "age": "",
-      "class": "",
-      "parent": "",
-      "adress": "",
-      "mobile": "",
-      "email": "",
-      "username": "",
-      "password": "",
-      "id": 13
+      "id": 1
     }
   ]
 }
